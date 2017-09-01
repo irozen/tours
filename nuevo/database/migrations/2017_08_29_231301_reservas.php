@@ -21,9 +21,11 @@ class Reservas extends Migration
           $table->foreign('tour_id')->references('id')->on('tours');
           $table->date('date');
           $table->integer('resNum');
-          $table->string('pickUp');
-          $table->string('dropOff');
-          $table->string('guide');
+          $table->string('pickUp')->nullable();
+          $table->string('dropOff')->nullable();
+          $table->string('guide')->nullable();
+          $table->string('language');
+          $table->integer('status');
           $table->timestamps();
       });
     }

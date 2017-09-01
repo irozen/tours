@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('photo')->nullable();
             $table->integer('view');
             $table->string('nationality');
+            $table->integer('type');
             $table->rememberToken();
             $table->timestamps();
         });
